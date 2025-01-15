@@ -41,7 +41,7 @@ git clone https://github.com/microsoft/vcpkg.git
 
 ## 任务
 
-### 1、创建分叉（Fork）并提交 PR （Pull Request）【10 pts】
+### 1、创建分叉（Fork）并提交 PR （Pull Request）【10 pts】 - TESTED
 
 在一个团队合作的项目中，每个人提交的每一行代码都可能引发无法预料的后果，你的每一行代码在进入主仓库之前都需要经过严格的审核。
 你不拥有对主仓库的写权限，在编写你贡献的新代码之前，你需要先从主仓库创建一个属于你自己的分叉（Fork）。在 GitHub 中，
