@@ -110,13 +110,25 @@ uint32_t GameCore::AddPlayer() {
   return player_id;
 }
 
-glm::vec4 GameCore::GetPlayerColor(uint32_t player_id) const {
+glm::vec4 GameCore::GetPlayerColor(uint32_t player_id, float health) const {
   if (render_perspective_ == 0) {
     return glm::vec4{0.5f, 1.0f, 0.5f, 1.0f};
-  } else if (render_perspective_ == player_id) {
-    return glm::vec4{1.0f, 1.0f, 1.0f, 1.0f};
-  } else {
-    return glm::vec4{1.0f, 0.5f, 0.5f, 1.0f};
+  } 
+  else if (render_perspective_ == player_id) {
+        if (health < 0.5) {
+            return glm::vec4{0.0f, 0.0f, 0.0f, 1.0f};
+        } 
+        else {
+          return glm::vec4{1.0f, 1.0f, 1.0f, 1.0f};
+        }
+  } 
+  else {
+        if (health < 0.5) {
+            return glm::vec4{0.0f, 0.0f, 0.0f, 1.0f};
+        } 
+        else {
+          return glm::vec4{1.0f, 0.5f, 0.5f, 1.0f};
+        }
   }
 }
 

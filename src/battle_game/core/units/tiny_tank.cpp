@@ -73,7 +73,7 @@ Tank::Tank(GameCore *game_core, uint32_t id, uint32_t player_id)
 void Tank::Render() {
   battle_game::SetTransformation(position_, rotation_);
   battle_game::SetTexture(0);
-  battle_game::SetColor(game_core_->GetPlayerColor(player_id_));
+  battle_game::SetColor(game_core_->GetPlayerColor(player_id_, GetHealth()));
   battle_game::DrawModel(tank_body_model_index);
   battle_game::SetRotation(turret_rotation_);
   battle_game::DrawModel(tank_turret_model_index);
